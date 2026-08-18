@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quartz Pro | Quartz Countertops</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;color:#222;background:#fafafa;line-height:1.6}
+nav{position:sticky;top:0;background:#fff;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px #0001;z-index:5}
+.logo{font-size:24px;font-weight:800;color:#222}
+.logo span{color:#9b7b4f}
+nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:600}
+.hero{padding:90px 7%;background:linear-gradient(120deg,#f7f3ed,#fff);display:flex;align-items:center;gap:40px;min-height:520px}
+.hero-text{max-width:650px}
+.badge{display:inline-block;padding:7px 14px;background:#eee2d2;border-radius:30px;margin-bottom:18px;font-weight:700}
+h1{font-size:clamp(40px,7vw,68px);line-height:1.05;margin-bottom:20px}
+.hero p{font-size:19px;color:#555;margin-bottom:28px}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin-right:8px}
+.primary{background:#222;color:white}.secondary{border:1px solid #222;color:#222}
+section{padding:65px 7%}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:34px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;border-radius:16px;padding:25px;box-shadow:0 5px 20px #0000000d}
+.card h3{margin:12px 0 7px}
+.product{height:180px;border-radius:12px;background:linear-gradient(135deg,#eee,#fff);display:flex;align-items:end;padding:18px;font-weight:800}
+.dark{background:#222;color:#fff}
+.form{max-width:650px;margin:auto;background:#fff;padding:30px;border-radius:16px;box-shadow:0 5px 25px #0001}
+input,textarea,select{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #ddd;border-radius:8px;font-size:16px}
+button{border:0;cursor:pointer;width:100%;padding:14px;border-radius:8px;background:#222;color:#fff;font-size:16px;font-weight:700}
+footer{padding:30px 7%;background:#181818;color:#ddd;text-align:center}
+@media(max-width:700px){nav{display:block}nav div:last-child{margin-top:10px}nav a{margin:0 10px 0 0}.hero{padding-top:65px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Quartz<span>Pro</span></div>
+  <div>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#quote">Quote</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <span class="badge">Premium Quartz Solutions</span>
+    <h1>Beautiful Quartz.<br>Perfect Finish.</h1>
+    <p>Kitchen countertops, premium quartz surfaces and professional installation support—all in one place.</p>
+    <a class="btn primary" href="#quote">Get Free Quote</a>
+    <a class="btn secondary" href="#products">View Designs</a>
+  </div>
+</header>
+
+<section id="products">
+  <div class="title"><h2>Popular Quartz Designs</h2><p>Choose a finish for your kitchen or project.</p></div>
+  <div class="cards">
+    <div class="card"><div class="product">Calacatta Classic</div><h3>Calacatta Classic</h3><p>Elegant marble-inspired look.</p></div>
+    <div class="card"><div class="product">Carrara White</div><h3>Carrara White</h3><p>Clean and timeless white finish.</p></div>
+    <div class="card"><div class="product">Vico Stone</div><h3>Vico Stone</h3><p>Modern surface for contemporary kitchens.</p></div>
+  </div>
+</section>
+
+<section id="services" class="dark">
+  <div class="title"><h2>Our Services</h2><p>Simple, professional and project-focused.</p></div>
+  <div class="cards">
+    <div class="card"><h3>📐 Measurement</h3><p>Project area and requirement assessment.</p></div>
+    <div class="card"><h3>🧱 Quartz Supply</h3><p>Multiple designs and thickness options.</p></div>
+    <div class="card"><h3>🔧 Installation</h3><p>Professional countertop installation support.</p></div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="title"><h2>Get Your Free Quote</h2><p>Fill in the details and we'll contact you.</p></div>
+  <form class="form" onsubmit="sendQuote(event)">
+    <input id="name" placeholder="Customer Name" required>
+    <input id="mobile" placeholder="Mobile Number" required>
+    <select id="product">
+      <option>Calacatta Classic</option>
+      <option>Carrara White</option>
+      <option>Vico Stone</option>
+    </select>
+    <input id="area" type="number" placeholder="Area (Sq. Ft.)" required>
+    <input id="rate" type="number" placeholder="Rate per Sq. Ft." required>
+    <textarea id="message" placeholder="Project details"></textarea>
+    <button type="submit">Send Enquiry on WhatsApp</button>
+  </form>
+</section>
+
+<section id="contact">
+  <div class="title"><h2>Contact Quartz Pro</h2><p>For customers, dealers and interior partners.</p></div>
+  <div class="cards">
+    <div class="card"><h3>📱 WhatsApp</h3><p>Replace the demo number in the website code with your WhatsApp number.</p></div>
+    <div class="card"><h3>🤝 Partnerships</h3><p>Interior designers, modular kitchen dealers and fabricators can partner with Quartz Pro.</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Quartz Pro. Premium Quartz Solutions.</p>
+</footer>
+
+<script>
+function sendQuote(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const mobile=document.getElementById('mobile').value;
+  const product=document.getElementById('product').value;
+  const area=document.getElementById('area').value;
+  const rate=document.getElementById('rate').value;
+  const msg=document.getElementById('message').value;
+  const total=(Number(area)*Number(rate)).toFixed(2);
+  const text=`Quartz Pro Enquiry%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(mobile)}%0AProduct: ${encodeURIComponent(product)}%0AArea: ${area} Sq.Ft.%0ARate: ₹${rate}/Sq.Ft.%0AEstimated Total: ₹${total}%0ADetails: ${encodeURIComponent(msg)}`;
+  window.open(`https://wa.me/919999999999?text=${text}`,'_blank');
+}
+</script>
+</body>
+</html>

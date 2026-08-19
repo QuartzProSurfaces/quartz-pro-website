@@ -113,7 +113,7 @@ function sendQuote(e){
   const msg=document.getElementById('message').value;
   const total=(Number(area)*Number(rate)).toFixed(2);
   const text=`Quartz Pro Enquiry%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(mobile)}%0AProduct: ${encodeURIComponent(product)}%0AArea: ${area} Sq.Ft.%0ARate: ₹${rate}/Sq.Ft.%0AEstimated Total: ₹${total}%0ADetails: ${encodeURIComponent(msg)}`;
-  window.open(`https://wa.me/919999999999?text=${text}`,'_blank');
+  window.open(`https://wa.me/917203854347?text=${text}`,'_blank');
 }
 </script>
 </body>
